@@ -1,0 +1,523 @@
+#mobile-page{
+  padding-bottom: 8vh;
+}
+/* ===== PRODUCT GALLERY SLIDER ===== */
+
+.pg-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.pg-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.pg-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.pg-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pg-slide img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* buttons */
+.pg-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.pg-btn.prev {
+  left: 10px;
+}
+
+.pg-btn.next {
+  right: 10px;
+}
+
+/* Assurance badges */
+.assurance-wrap {
+  margin: 1vh 4vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 1vh;
+  border-bottom: 1px solid #454545bc;
+  border-top: 1px solid #454545bc;
+}
+
+.assurance-item {
+  margin-top: 1vh;
+  padding: 12px 8px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.assurance-item img {
+  width: 5vh;
+}
+
+.assurance-item span {
+  font-size: 0.8rem;
+  color: #323a40;
+  font-family: "Alice", serif;
+  color: rgb(27, 123, 27);
+}
+.assurance-item #red {
+  font-size: 0.8rem;
+  color: #323a40;
+  font-family: "Alice", serif;
+  color: rgb(169, 34, 34);
+}
+
+/* ==========data========== */
+
+#productName {
+  margin-top: 3vh;
+  padding: 1vh 4vw;
+  font-size: 3vh;
+  font-family: "Arsenal", sans-serif;
+}
+
+.atDetail {
+  margin-left: 4vw;
+  font-size: 2vh;
+  color: #192f49c5;
+  font-family: "Alice", serif;
+}
+.starAtDetail {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.product-variants {
+  width: 60vw;
+  background-color: #f5f7f8;
+  margin-top: 2vh;
+  padding: 1.5vh 4vw 0.5vh;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.variant-label {
+  margin-right: auto;
+}
+
+.variant-item {
+  display: flex;
+  margin-bottom: 1vh;
+  color: #192f49c5;
+  font-family: "Arsenal", serif;
+  font-weight: 600;
+}
+
+.price-section-main {
+  display: flex;
+  margin-left: 4vw;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2vh;
+  font-family: "Arsenal", serif;
+  margin-bottom: 2vh;
+}
+
+/* discount */
+.discount {
+  color: 169, 34, 34;
+  font-weight: 600;
+  font-size: 2.4vh;
+  color: rgb(169, 34, 34);
+}
+
+/* MRP (cut price) */
+.mrp {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 2vh;
+}
+
+/* final price */
+.price {
+  font-size: 2.7vh;
+  font-weight: 700;
+  color: #192f49;
+}
+
+/* ==========delivery========== */
+
+.delivery-text {
+  display: flex;
+  gap: 5vw;
+  margin-top: 1.7vh;
+  align-items: end;
+  font-size: 2.1vh;
+  color: #323a40;
+  font-family: "Alice", serif;
+}
+.delivery-text img {
+  width: 3.5vh;
+}
+
+.delivery-title {
+  color: #192f49;
+  font-family: "Arsenal", sans-serif;
+  font-size: 2.6vh;
+  letter-spacing: 1px;
+}
+
+.delivery-section {
+  margin: 1vh 4vw;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #454545bc;
+  border-top: 1px solid #454545bc;
+  padding-top: 2vh;
+}
+
+/* ============bottom nav========== */
+.price-section {
+  position: fixed;
+  bottom: 0;
+  height: 7vh;
+  width: 100vw;
+  z-index: 700;
+  left: 0;
+  display: flex;
+  background-color: #fff;
+}
+
+/* ============================= */
+/* SPECIFICATION SECTION */
+/* ============================= */
+
+.specs-section {
+  position: relative;
+  margin-top: 3vh;
+  padding-top: 1vh;
+  overflow: hidden;
+}
+
+.specs-title {
+  font-size: 2.8vh;
+  margin-bottom: 3vh;
+  margin-left: 4vw;
+  color: #192f49;
+  font-family: "Arsenal", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ============================= */
+/* TILE CONTAINER */
+/* ============================= */
+
+.specs-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 4vw;
+  width: 92vw;
+  margin-bottom: 2vh;
+}
+
+/* ============================= */
+/* TILE */
+/* ============================= */
+
+.spec-tile {
+  background: #f5f7f8;
+  border: 1px solid #555;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ============================= */
+/* TILE HEADER */
+/* ============================= */
+
+.spec-head {
+  width: 100%;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: transparent;
+  border: none;
+
+  font-size: 1rem;
+  font-family: "Alice", serif;
+  color: #323a40;
+
+  cursor: pointer;
+}
+
+.spec-head i {
+  transition: transform 0.28s ease;
+}
+
+/* arrow rotate */
+
+.spec-tile.open .spec-head i {
+  transform: rotate(180deg);
+}
+
+/* ============================= */
+/* TILE BODY */
+/* ============================= */
+
+.spec-body {
+  padding: 0 14px;
+  max-height: 0;
+  overflow: hidden;
+
+  background: #fff;
+
+  transition:
+    max-height 0.3s ease,
+    padding 0.2s ease;
+}
+
+.spec-tile.open .spec-body {
+  padding: 10px 14px 12px;
+  max-height: 480px;
+}
+
+/* ============================= */
+/* SPEC LIST */
+/* ============================= */
+
+.spec-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.spec-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+
+  border-bottom: 1px solid #1c20277e;
+}
+
+.spec-list li:last-child {
+  border-bottom: none;
+}
+
+.spec-name {
+  font-family: "Alice", serif;
+  color: #555;
+}
+
+.spec-value {
+  font-family: "Alice", serif;
+  color: #2c5080;
+}
+
+/* ============================= */
+/* SEE MORE BUTTON */
+/* ============================= */
+
+.see-more-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.see-more-btn {
+  display: none;
+
+  margin-top: 12px;
+  margin-bottom: 2vh;
+
+  padding: 1vh 6vw;
+
+  border: none;
+  border-radius: 12px;
+
+  font-family: "Alice", serif;
+  letter-spacing: 1px;
+
+  background: #1d4375;
+  color: #e2e3e2;
+
+  box-shadow: 2px 4px 6px #00000070;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  transform: scale(1.05);
+}
+
+.specs-fade {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+
+  /* BLACK GRADIENT FADE */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.05),
+    transparent
+  );
+}
+
+/* ============================= */
+/* PAYMENT SECTION */
+/* ============================= */
+
+.payment-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 8vh;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 4vw;
+
+  z-index: 999;
+
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================= */
+/* PRICE BOX */
+/* ============================= */
+
+.payment-price-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3vw;
+  width: 40vw;
+}
+
+/* top row (mrp + discount) */
+.price-top {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* MRP */
+.payment-mrp {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1.8vh;
+  font-family: "Alice", serif;
+}
+
+/* discount */
+.payment-discount {
+  color: rgb(169, 34, 34);
+  font-size: 1.8vh;
+  font-weight: 600;
+  font-family: "Arsenal", serif;
+}
+
+/* final price */
+.payment-final-price {
+  font-size: 2.6vh;
+  font-weight: 700;
+  color: #192f49;
+  font-family: "Arsenal", serif;
+}
+
+/* ============================= */
+/* BUTTON BOX */
+/* ============================= */
+
+.payment-button-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Razorpay button override (optional) */
+.payment-button-box form {
+  display: flex;
+}
+
+.payment-options {
+  margin: 2vh 4vw;
+}
+
+/* title */
+.payment-options-title {
+  font-size: 2.6vh;
+  margin-bottom: 1vh;
+  font-family: "Arsenal", sans-serif;
+  margin-bottom: 3vh;
+  color: #192f49;
+}
+
+/* grid */
+.payment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 👈 THIS centers items in each row */
+  gap: 12px;
+}
+
+/* images */
+.payment-grid img {
+  width: 70px;
+ object-fit: contain;
+}
+
+
+
+.payment-grid img:hover {
+  transform: scale(1.05);
+}
+
+#visa,#rupay,#mc {
+  width: 50px;
+}
+
+#amazon,#gpay,#phonepe{
+  width: 90px;
+}
+#paytm{
+  width: 85px;
+}
+
+#net{
+  width: 60px;
+}
