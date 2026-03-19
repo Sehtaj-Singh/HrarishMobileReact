@@ -5,17 +5,17 @@ export default function Assurance() {
     <section className="assurance-wrap">
 
       <div className="assurance-item">
-        <img src="/images/exchange1.png" />
+        <img src="/images/exchange1.webp" />
         <span>7-day exchange</span>
       </div>
 
       <div className="assurance-item">
-        <img src="/images/ship.png" />
+        <img src="/images/ship.webp" />
         <span>Secure delivered</span>
       </div>
 
       <div className="assurance-item">
-        <img src="/images/ban.png" />
+        <img src="/images/ban.webp" />
         <span id="red">No return allowed</span>
       </div>
 

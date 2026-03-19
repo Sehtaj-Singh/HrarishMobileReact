@@ -42,7 +42,7 @@ export default function Contact() {
         <form className="contact-form">
           <h3 className="form-title">Message Us</h3>
 
-          <img id="conatct" src="/images/contact.jpg"></img>
+          <img id="conatct" src="/images/contact.webp"></img>
 
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />

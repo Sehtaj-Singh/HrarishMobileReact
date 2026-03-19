@@ -39,7 +39,7 @@ export default function Delivery() {
 
       <div className="delivery-text">
 
-        <img src="/images/truck1.png" alt="delivery" />
+        <img src="/images/truck1.webp" alt="delivery" />
 
         <p>{formattedDate}</p>
 
