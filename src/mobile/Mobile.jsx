@@ -49,12 +49,12 @@ export default function Mobile({ slug }) {
       <Header />
 
       <section className="product-container">
-        {/* LEFT / TOP */}
+        
         <div className="product-gallery-wrap">
           <ProductGallery images={mobile.images} />
         </div>
 
-        {/* RIGHT / BOTTOM */}
+        
         <div className="product-data">
           <ProductMainInfo mobile={mobile} />
           
@@ -67,7 +67,7 @@ export default function Mobile({ slug }) {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
 
       
     </div>

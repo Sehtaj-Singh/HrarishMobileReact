@@ -310,9 +310,10 @@ body {
   color: #0e192a;
   font-size: 4vh;
   letter-spacing: 1px;
-  margin-left: 5vw;
+  margin-top: 3vh;
   margin-bottom: 3vh;
   font-weight: 400;
+  text-align: center;
 }
 .upper-cat {
   display: flex;
@@ -496,6 +497,7 @@ body {
   letter-spacing: 1px;
   font-weight: 400;
   margin-bottom: 4vh;
+  text-align: center;
 }
 
 .mobile-grid {
@@ -595,8 +597,9 @@ body {
   letter-spacing: 1px;
   font-weight: 400;
   margin-bottom: 2vh;
+  text-align: center;
   padding-top: 2vh;
-  padding-left: 5vw;
+  
 }
 
 .bn-slider-wrapper {
@@ -798,6 +801,7 @@ body {
   }
   .rating-number {
     font-size: 2.7vh;
+    margin-left: 7px;
   }
   .mobileDiscount {
     font-size: 1.8vw;
@@ -818,6 +822,9 @@ body {
     margin-bottom: 5vh;
     font-size: 6vh;
   }
+  .bn-slider{
+    gap: 4vw;
+  }
 }
 
 /* ===================repair============= */
@@ -826,15 +833,15 @@ body {
   flex-direction: column;
 }
 #repair-title {
-  margin-top: 4vh;
+  margin-top: 7vh;
   text-align: start;
   font-family: "Alegreya SC", serif;
   color: #0e192a;
+  text-align: center;
   font-size: 4vh;
   letter-spacing: 1px;
   font-weight: 400;
   margin-bottom: 3vh;
-  margin-left: 5vw;
 }
 .repair-data {
   margin-top: 3vh;
@@ -942,8 +949,8 @@ body {
   letter-spacing: 1px;
   margin-top: 5vh;
   font-weight: 400;
-  margin-bottom: 4vh;
-  margin-left: 5vw;
+  margin-bottom: 7vh;
+  text-align: center;
 }
 
 #contact-conatiner {
@@ -1134,7 +1141,7 @@ body {
   }
   #contact-title {
     font-size: 6vh;
-    margin-top: 8vh;
+    margin-top: 13vh;
   }
   .ribon-name h3 {
     font-size: 3.5vh;

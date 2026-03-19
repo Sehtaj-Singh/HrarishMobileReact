@@ -92,7 +92,7 @@ export default function NewMobiles({ excludeSlug }) {
                         </span>
 
                         <span className="rating-number">
-                          {rating.toFixed(1)}
+                          {rating.toFixed(1)}/5
                         </span>
                       </p>
 
