@@ -75,6 +75,9 @@
     width: 50vw;
     position: fixed;
   }
+  .pg-slide{
+    margin-top: 20vh;
+  }
 }
 
 /* ============================= */
