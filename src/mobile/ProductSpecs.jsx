@@ -9,10 +9,11 @@ export default function ProductSpecs({ specs }) {
   const sectionMap = {
     general: "General",
     backCamera: "Rear Camera",
-    memory: "Memory & Storage",
+    memory: "Memory",
     selfieCamera: "Front Camera",
     design: "Design",
     display: "Display",
+    camera: "Camera",
     connectivity: "Network & Connectivity",
     performance: "Performance",
     battery: "Battery",
