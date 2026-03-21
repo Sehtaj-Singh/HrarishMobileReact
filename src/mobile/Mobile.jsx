@@ -60,7 +60,7 @@ export default function Mobile({ slug }) {
           
           <Delivery />
           <ProductSpecs specs={mobile.specs} />
-          {/* <PaymentSection mobile={mobile} /> */}
+          <PaymentSection mobile={mobile} />
           <Assurance />
           <PaymentOptions />
           <NewMobiles excludeSlug={slug} />
