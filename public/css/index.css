@@ -308,181 +308,204 @@ body {
 #cat-title {
   font-family: "Alegreya SC", serif;
   color: #0e192a;
-  font-size: 4vh;
+  font-size: 4.5vh;
   letter-spacing: 1px;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 1vh;
+  margin-bottom: 4vh;
   font-weight: 400;
   text-align: center;
 }
-.upper-cat {
+.categories {
+  padding: 16px;
+}
+
+.cat-container {
   display: flex;
-  margin-bottom: 5vh;
-}
-#cat {
-  width: 45vw;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-left: 3vw;
-  margin-right: 3vw;
-  background: url("/images/cat-refurb.webp") center / cover no-repeat;
-  aspect-ratio: 4000/2500;
-  border: 2px solid #0e192aaa;
-}
-#cat2 {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  width: 45vw;
-  background: url("/images/cat-new.webp") center / cover no-repeat;
-  aspect-ratio: 4000/2500;
-  border: 2px solid #0e192aaa;
+  flex-direction: column;
+  gap: 30px;
 }
 
-#cat3 {
-  width: 94vw;
-  position: relative;
+/* ===== COMMON BOX ===== */
+.cat-box {
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  border-radius: 10px;
-  border: 2px solid #0e192aaa;
-  margin-left: 3vw;
-  background: url("/images/cat-accessory.webp") center / cover no-repeat;
-  aspect-ratio: 2046/839;
 }
 
-#cat::after,
-#cat2::after,
-#cat3::after {
+/* ===== IMAGE ===== */
+.cat-img {
+  width: 50%;
+}
+
+.cat-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.refurb {
+  padding-left: 20px;
+}
+
+/* ===== CONTENT ===== */
+.cat-content {
+  width: 50%;
+  margin-bottom: 2vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.cat-content h3 {
+  margin: 0;
+  color: #0e192a;
+  letter-spacing: 1px;
+  font-size: 2.5vh;
+  font-family: "Arsenal", sans-serif;
+  line-height: 1;
+  margin-bottom: 1.5vh;
+}
+
+.cat-desc {
+  font-size: 15px;
+  font-family: "Alice", serif;
+  width: 80%;
+}
+
+/* ===== ACCESSORY ===== */
+.cat-accessory {
+  position: relative;
+  display: block;
+  aspect-ratio: 2832/2655;
+  background: url("/images/cat-accessory2.jpg") center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+/* ===== GRADIENT OVERLAY ===== */
+.cat-accessory::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    /* strong black bottom */ rgba(0, 0, 0, 0.3) 40%,
+    /* medium */ rgba(0, 0, 0, 0) 100% /* transparent top */
+  );
+
   z-index: 1;
 }
 
-#cat h3,
-#cat2 h3 {
-  position: absolute;
-  z-index: 2;
-  color: #f5f7f8;
-  font-size: 3.8vw;
-  font-family: "Overlock SC", sans-serif;
-  letter-spacing: 1px;
-  left: 2vw;
-  bottom: 1vh;
+.cat-content {
+  will-change: transform, opacity;
 }
 
-#cat3-data {
-  position: absolute;
-  right: 3vw;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  bottom: 3vh;
-  gap: 3vh;
-  align-items: center;
+.cat-accessory h3 {
+  font-family: "Arsenal", sans-serif;
+  color: white;
+  z-index: 4;
+  font-size: 5vh;
+  letter-spacing: 1px;
+  margin-bottom: 3vh;
 }
 
-#cat3 h3 {
-  display: inline-block;
-  color: #f5f7f8;
-  font-size: 5vw;
-  font-family: "Overlock SC", sans-serif;
-  letter-spacing: 1px;
+/* ===== INITIAL STATE ===== */
+.cat-content {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s ease;
 }
-#cat-shop {
-  color: #f5f7f8;
-  font-size: 4vw;
-  font-weight: 300;
-  padding: 3px;
-  padding: 1vh 3vw;
-  letter-spacing: 1px;
-  border: 2px solid #f5f7f8;
-  border-radius: 5px;
-  width: fit-content;
+
+/* from LEFT */
+.cat-refurb .cat-content {
+  transform: translateX(-30px);
 }
+
+/* from RIGHT */
+.cat-new .cat-content {
+  transform: translateX(30px);
+}
+
+.cat-content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media (min-width: 768px) {
-  #cat,
-  #cat2,
-  #cat3 {
-    border-radius: 20px;
+  .categories {
+    padding: 50px;
   }
-  #cat-title {
-    font-size: 4.5vh;
+  .cat-container {
+    gap: 60px;
   }
-
-  #cat {
-    width: 40vw;
-    margin-left: 6vw;
-    margin-right: 7vw;
+  .cat-content h3 {
+    font-size: 3.3vh;
+    margin-bottom: 2.5vh;
   }
-  #cat2 {
-    width: 40vw;
+  .cat-desc {
+    font-size: 25px;
   }
-  .upper-cat {
-    margin-bottom: 3vh;
+  .refurb {
+    padding-left: 40px;
   }
-  #cat3 {
-    width: 87vw;
-    margin-left: 6vw;
+  .cat-accessory h3 {
+    letter-spacing: 3px;
+    margin-bottom: 7vh;
+    font-size: 6vh;
   }
-  #cat h3,
-  #cat2 h3 {
-    font-size: 3.5vw;
-    left: 2vw;
-    bottom: 2vh;
-  }
-  #cat3-data {
-    bottom: 7vh;
-  }
-  #cat-shop {
-    border-radius: 15px;
+  #cat-title{
+    font-size: 6vh;
   }
 }
 
+/* ===== DESKTOP CATEGORY LAYOUT ===== */
 @media (min-width: 1024px) {
-  #cat-title {
-    margin-top: 4vh;
-    margin-bottom: 5vh;
-    font-size: 7vh;
-  }
-  .upper-cat {
-    flex-direction: column;
-    display: flex;
-    gap: 3vh;
-    width: 30vw;
-    margin-bottom: 0;
-  }
-  #Category-section {
-    display: flex;
-  }
-  #cat,
-  #cat2 {
-    width: 25vw;
-    margin-left: 2vw;
-    margin-right: 0;
+  .cat-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50% - 50% */
+    grid-template-rows: auto auto;
+    gap: 40px;
   }
 
-  #cat3 {
-    width: 68vw;
-    margin-left: 0;
+  /* LEFT SIDE */
+  .cat-refurb {
+    grid-column: 1;
+    grid-row: 1;
   }
-  #cat h3,
-  #cat2 h3 {
-    font-size: 2vw;
+
+  .cat-new {
+    grid-column: 1;
+    grid-row: 2;
   }
-  #cat3 h3 {
-    font-size: 3vw;
+  .cat-content h3 {
+    font-size: 4vh;
   }
-  #cat-shop {
-    font-size: 2vw;
+
+  /* RIGHT SIDE (FULL HEIGHT) */
+  .cat-accessory {
+    grid-column: 2;
+    grid-row: 1 / span 2; /* span both rows */
+    width: 85%;
+    margin-left: 5vw;
   }
-  #cat3-data {
-    top: 30vh;
+
+  /* Make left items equal height feel */
+  .cat-refurb,
+  .cat-new {
+    height: 100%;
+  }
+
+  #cat-title {
+    font-size: 7vh;
+    margin-bottom: 7vh;
+    margin-top: 3vh;
   }
 }
+
 /* =================top sellers======== */
 .top-sellers {
   background: #ffffff;
@@ -599,7 +622,6 @@ body {
   margin-bottom: 2vh;
   text-align: center;
   padding-top: 2vh;
-  
 }
 
 .bn-slider-wrapper {
@@ -822,7 +844,7 @@ body {
     margin-bottom: 5vh;
     font-size: 6vh;
   }
-  .bn-slider{
+  .bn-slider {
     gap: 4vw;
   }
 }
@@ -921,7 +943,7 @@ body {
     width: 40vw;
     margin-left: 5vw;
   }
- 
+
   .repair-img img {
     width: 40vw;
     border-radius: 12px;
@@ -951,6 +973,12 @@ body {
   font-weight: 400;
   margin-bottom: 7vh;
   text-align: center;
+}
+#conatct {
+  width: 80vw;
+  margin-left: 10vw;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
 }
 
 #contact-conatiner {
@@ -1023,6 +1051,7 @@ body {
   gap: 2vh;
   font-family: "Alice", serif;
   margin-bottom: 4vh;
+  justify-content: space-evenly;
 }
 
 .form-title {
@@ -1112,53 +1141,64 @@ body {
 @media (min-width: 1024px) {
   #contact {
     display: flex;
-    margin-bottom: 9vh;
+    margin-bottom: 15vh;
+    justify-content: center;
   }
   .contact-form {
-    width: 49vw;
-    margin-right: 6vw;
-    padding: 3vh 5vw;
+    width: 35vw;
+    margin-right: 5vw;
+    margin-left: 3vw;
+    padding: 3vh 3vw;
     margin-bottom: 0vh;
     margin-left: 1vw;
-    height: max-content;
+    aspect-ratio: 868/1067;
   }
-   #conatct{
+  #conatct {
     width: 30vw;
+    margin-left: 0vw;
+    aspect-ratio: 1000/752;
+    margin-top: 0;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 15vh;
   }
   #map {
-    width: 44vw;
+    width: 27vw;
     margin-left: 5vw;
   }
   .contact-icon {
-    width: 19vw;
-    padding: 2vh 2vw;
-    font-size: 23px;
-    margin-bottom: 6vh;
+    width: 12vw;
+    padding: 1.5vh 2vw;
+    font-size: 18px;
+    margin-bottom: 1vh;
   }
   .contact-icons {
     left: 2vw;
-    top: 6vh;
+    top: 2vh;
   }
   #contact-title {
     font-size: 6vh;
-    margin-top: 13vh;
+    margin-top: 20vh;
   }
   .ribon-name h3 {
-    font-size: 3.5vh;
+    font-size: 2.5vh;
   }
   .ribon-name i {
-    font-size: 3vh;
+    font-size: 2.5vh;
   }
   .form-title {
-    font-size: 5vh;
+    font-size: 4vh;
   }
   .contact-form input,
   .contact-form textarea {
     margin-bottom: 1vh;
-    padding: 1.5vh 2vw;
+    width: 20vw;
+    font-size: 2.2vh;
+    padding: 1.5vh 1.5vw;
   }
   .contact-form button {
     margin-top: 2vh;
+    font-size: 2.2vh;
   }
   #contact-conatiner {
     margin-bottom: 0vh;
