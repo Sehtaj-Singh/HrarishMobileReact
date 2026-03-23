@@ -29,7 +29,7 @@ export default function Categories() {
         {/* ===== REFURB ===== */}
         <div className="cat-box cat-refurb ">
           <div className="cat-img">
-            <img src="/images/cat-refu.jpg" alt="Refurbished Mobile" />
+            <img src="/images/cat-refu.webp" alt="Refurbished Mobile" />
           </div>
 
           <div className="cat-content refurb">
@@ -53,7 +53,7 @@ export default function Categories() {
           </div>
 
           <div className="cat-img">
-            <img src="/images/cat-new.jpg" alt="New Mobile" />
+            <img src="/images/cat-new.webp" alt="New Mobile" />
           </div>
         </div>
 
@@ -63,7 +63,7 @@ export default function Categories() {
 
           <h3>Assessory</h3>
 
-          
+
 
         </div>
 

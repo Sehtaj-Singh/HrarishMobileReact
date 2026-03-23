@@ -359,8 +359,8 @@ body {
   margin: 0;
   color: #0e192a;
   letter-spacing: 1px;
-  font-size: 2.5vh;
-  font-family: "Arsenal", sans-serif;
+  font-size: 2.2vh;
+   font-family: "Inter", sans-serif;
   line-height: 1;
   margin-bottom: 1.5vh;
 }
@@ -376,7 +376,7 @@ body {
   position: relative;
   display: block;
   aspect-ratio: 2832/2655;
-  background: url("/images/cat-accessory2.jpg") center / cover no-repeat;
+  background: url("/images/cat-accessory2.webp") center / cover no-repeat;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -405,7 +405,7 @@ body {
 }
 
 .cat-accessory h3 {
-  font-family: "Arsenal", sans-serif;
+  font-family: "Inter", sans-serif;
   color: white;
   z-index: 4;
   font-size: 5vh;
@@ -482,7 +482,10 @@ body {
     grid-row: 2;
   }
   .cat-content h3 {
-    font-size: 4vh;
+    font-size: 4.5vh;
+  }
+  .cat-desc {
+    font-size: 20px;
   }
 
   /* RIGHT SIDE (FULL HEIGHT) */
@@ -1146,21 +1149,21 @@ body {
   }
   .contact-form {
     width: 35vw;
-    margin-right: 5vw;
-    margin-left: 3vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
     padding: 3vh 3vw;
     margin-bottom: 0vh;
     margin-left: 1vw;
     aspect-ratio: 868/1067;
   }
   #conatct {
-    width: 30vw;
+    width:25vw;
     margin-left: 0vw;
-    aspect-ratio: 1000/752;
+    margin-right: 5vw;
+    aspect-ratio: 512/634;
     margin-top: 0;
     height: auto;
     object-fit: contain;
-    margin-bottom: 15vh;
   }
   #map {
     width: 27vw;
@@ -1192,7 +1195,7 @@ body {
   .contact-form input,
   .contact-form textarea {
     margin-bottom: 1vh;
-    width: 20vw;
+    width: 18vw;
     font-size: 2.2vh;
     padding: 1.5vh 1.5vw;
   }
