@@ -8,7 +8,7 @@ export default function Categories() {
 
       <img id="refurb" src="/images/refurb13.webp"></img>
 
-      <a href="/" id="a-new"><img id="new" src="/images/new13.webp"></img></a>
+      <a href="#bn-mobile" id="a-new"><img id="new" src="/images/new13.webp"></img></a>
       
 
       <img id="accessory" src="/images/assesory12.webp"></img>

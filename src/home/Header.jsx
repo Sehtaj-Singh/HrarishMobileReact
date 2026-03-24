@@ -14,7 +14,7 @@ export default function Header() {
 
         {/* DESKTOP NAV */}
         <nav className="nav-links">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
           <a href="#top-seller">Mobiles</a>
           <a href="#repair-title">Repair</a>
           <a
