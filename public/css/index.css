@@ -318,195 +318,71 @@ body {
 .categories {
   padding: 16px;
 }
-
-.cat-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.cat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "refurb new"
+    "accessory accessory";
+  gap: 15px;
 }
 
-/* ===== COMMON BOX ===== */
-.cat-box {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+#refurb {
+  grid-area: refurb;
 }
 
-/* ===== IMAGE ===== */
-.cat-img {
-  width: 50%;
-}
-
-.cat-img img {
-  width: 100%;
-  height: 100%;
-}
-
-.refurb {
-  padding-left: 20px;
-}
-
-/* ===== CONTENT ===== */
-.cat-content {
-  width: 50%;
-  margin-bottom: 2vh;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.cat-content h3 {
-  margin: 0;
-  color: #0e192a;
-  letter-spacing: 1px;
-  font-size: 2.2vh;
-   font-family: "Inter", sans-serif;
-  line-height: 1;
-  margin-bottom: 1.5vh;
-}
-
-.cat-desc {
-  font-size: 15px;
-  font-family: "Alice", serif;
-  width: 80%;
-}
-
-/* ===== ACCESSORY ===== */
-.cat-accessory {
-  position: relative;
+#a-new {
+  grid-area: new;
   display: block;
-  aspect-ratio: 2832/2655;
-  background: url("/images/cat-accessory2.webp") center / cover no-repeat;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: end;
 }
 
-/* ===== GRADIENT OVERLAY ===== */
-.cat-accessory::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    /* strong black bottom */ rgba(0, 0, 0, 0.3) 40%,
-    /* medium */ rgba(0, 0, 0, 0) 100% /* transparent top */
-  );
-
-  z-index: 1;
+#accessory {
+  grid-area: accessory;
 }
 
-.cat-content {
-  will-change: transform, opacity;
-}
-
-.cat-accessory h3 {
-  font-family: "Inter", sans-serif;
-  color: white;
-  z-index: 4;
-  font-size: 5vh;
-  letter-spacing: 1px;
-  margin-bottom: 3vh;
-}
-
-/* ===== INITIAL STATE ===== */
-.cat-content {
-  opacity: 0;
-  transform: translateX(30px);
-  transition: all 0.6s ease;
-}
-
-/* from LEFT */
-.cat-refurb .cat-content {
-  transform: translateX(-30px);
-}
-
-/* from RIGHT */
-.cat-new .cat-content {
-  transform: translateX(30px);
-}
-
-.cat-content.show {
-  opacity: 1;
-  transform: translateX(0);
+/* images */
+.cat img {
+  width: 100%;
+  object-fit: contain;
+  
 }
 
 @media (min-width: 768px) {
   .categories {
     padding: 50px;
   }
-  .cat-container {
-    gap: 60px;
-  }
-  .cat-content h3 {
-    font-size: 3.3vh;
-    margin-bottom: 2.5vh;
-  }
-  .cat-desc {
-    font-size: 25px;
-  }
-  .refurb {
-    padding-left: 40px;
-  }
-  .cat-accessory h3 {
-    letter-spacing: 3px;
-    margin-bottom: 7vh;
+
+  #cat-title {
     font-size: 6vh;
   }
-  #cat-title{
-    font-size: 6vh;
+  .cat {
+    gap: 30px;
   }
+  
 }
 
 /* ===== DESKTOP CATEGORY LAYOUT ===== */
 @media (min-width: 1024px) {
-  .cat-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 50% - 50% */
-    grid-template-rows: auto auto;
-    gap: 40px;
+  .cat {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "refurb accessory new";
+  }
+  .cat img {
+    object-fit: contain;
+    
   }
 
-  /* LEFT SIDE */
-  .cat-refurb {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .cat-new {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .cat-content h3 {
-    font-size: 4.5vh;
-  }
-  .cat-desc {
-    font-size: 20px;
-  }
-
-  /* RIGHT SIDE (FULL HEIGHT) */
-  .cat-accessory {
-    grid-column: 2;
-    grid-row: 1 / span 2; /* span both rows */
-    width: 85%;
-    margin-left: 5vw;
-  }
-
-  /* Make left items equal height feel */
-  .cat-refurb,
-  .cat-new {
-    height: 100%;
-  }
+  
 
   #cat-title {
     font-size: 7vh;
     margin-bottom: 7vh;
     margin-top: 3vh;
   }
+  .categories {
+  padding: 10px;
+  margin-bottom: 7vh;
+}
 }
 
 /* =================top sellers======== */
@@ -1157,7 +1033,7 @@ body {
     aspect-ratio: 868/1067;
   }
   #conatct {
-    width:25vw;
+    width: 25vw;
     margin-left: 0vw;
     margin-right: 5vw;
     aspect-ratio: 512/634;

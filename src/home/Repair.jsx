@@ -6,7 +6,7 @@ export default function Repair() {
       <section id="repair">
 
         <div className="repair-img">
-          <img src="/images/repair.webp" alt="repair" loading="lazy" />
+          <img src="/images/repair1.webp" alt="repair" loading="lazy" />
         </div>
 
         <div className="repair-data">

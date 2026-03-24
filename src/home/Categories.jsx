@@ -1,73 +1,20 @@
-import { useEffect } from "react";
-
 export default function Categories() {
-
-  useEffect(() => {
-    const elements = document.querySelectorAll(".cat-content");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
-        });
-      },
-      { threshold: 0.8 }
-    );
-
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
   return (
     <section className="categories">
-      <h2 id="cat-title">Categories</h2>
 
-      <div className="cat-container">
+     <h2 id="cat-title">Categories</h2>
 
-        {/* ===== REFURB ===== */}
-        <div className="cat-box cat-refurb ">
-          <div className="cat-img">
-            <img src="/images/cat-refu.webp" alt="Refurbished Mobile" />
-          </div>
+     <div className="cat">
 
-          <div className="cat-content refurb">
-            <h3>Refurbished Mobile</h3>
-            
-            <p className="cat-desc">
-              Tested and certified phones at lower prices with warranty.
-            </p>
-          </div>
-        </div>
+      <img id="refurb" src="/images/refurb13.webp"></img>
 
+      <a href="/" id="a-new"><img id="new" src="/images/new13.webp"></img></a>
+      
 
-        {/* ===== NEW ===== */}
-        <div className="cat-box cat-new">
-          <div className="cat-content new">
-            <h3>New Mobile</h3>
-            
-            <p className="cat-desc">
-              Latest smartphones with full warranty and original accessories.
-            </p>
-          </div>
+      <img id="accessory" src="/images/assesory12.webp"></img>
 
-          <div className="cat-img">
-            <img src="/images/cat-new.webp" alt="New Mobile" />
-          </div>
-        </div>
+     </div>
 
-
-        {/* ===== ACCESSORY ===== */}
-        <div className="cat-box cat-accessory">
-
-          <h3>Assessory</h3>
-
-
-
-        </div>
-
-      </div>
-    </section>
+   </section>
   );
 }
