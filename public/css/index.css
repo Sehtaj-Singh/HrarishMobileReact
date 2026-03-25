@@ -344,7 +344,7 @@ body {
 .cat img {
   width: 100%;
   object-fit: contain;
-  
+  border-radius: 8px;
 }
 
 @media (min-width: 768px) {
@@ -358,6 +358,11 @@ body {
   .cat {
     gap: 30px;
   }
+
+  /* images */
+.cat img {
+  border-radius: 14px;
+}
   
 }
 
